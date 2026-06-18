@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Apsara Raj | Editorial Portfolio & Global Affairs Journal</title>
+    
+    <!-- Tailwind CSS for modern responsive structure -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Premium Google Fonts: Playfair Display for heavy editorial authority & Plus Jakarta Sans for clean telemetry -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons for polished interface indicators -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#5C4D44',        /* Soft, Cool-Toned Latte/Mocha - Lighter & highly modern */
+                            blue: '#85B5D9',        /* Classic Lighter Powdered Blue - Active accents & primary indicators */
+                            ice: '#D2E2EC',         /* Slate/Ice Blue - Sophisticated background plates & borders */
+                            taupe: '#9E8D82',       /* Muted Cool Taupe / Light Latte details */
+                            bgCanvas: '#F6F3EF',    /* Elegant Cool Linen Paper Canvas */
+                            cardBg: '#FFFFFF',      /* Pristine reading cards */
+                            textDark: '#3A332F',    /* Soft cool espresso charcoal for comfortable high contrast readability */
+                            textMuted: '#7A6E67',   /* Medium latte gray-brown for secondary body copy */
+                            borderClean: '#E6E1DC'  /* Clean, cool latte milk border */
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 30px -10px rgba(92, 77, 68, 0.05)',
+                        'vibrant': '0 15px 35px -5px rgba(75, 142, 196, 0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F6F3EF;
+            color: #3A332F;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Custom premium scrollbar to match our custom design parameters */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F6F3EF;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #85B5D9;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5C4D44;
+        }
+
+        /* Smooth continuous marquee animation for advanced moving fonts */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee-container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+        .animate-marquee-content {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee-content:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-brand-textDark selection:bg-brand-blue/10">
+
+    <!-- Floating Social Hub: Compact, responsive pop-up drawer optimized for mobile and desktop access -->
+    <div class="fixed bottom-6 left-6 z-50 flex flex-col-reverse items-start gap-3 max-w-[280px]">
+        
+        <!-- Interactive Trigger Button -->
+        <button id="socialHubBtn" onclick="toggleSocialHub()" class="flex items-center justify-center gap-3 bg-brand-dark text-white px-5 py-4 rounded-full shadow-vibrant hover:bg-brand-blue hover:text-brand-dark hover:scale-105 transition-all duration-300 active:scale-95 text-xs font-bold tracking-widest uppercase">
+            <span class="relative flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-blue opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-blue"></span>
+            </span>
+            <i id="socialHubIcon" class="fa-solid fa-paper-plane transition-transform duration-300"></i>
+            <span>Connect With Me</span>
+        </button>
+
+        <!-- Dynamic Pop-Up Drawer -->
+        <div id="socialHubMenu" class="hidden flex flex-col gap-2 transition-all duration-300 transform scale-95 translate-y-4 opacity-0 origin-bottom-left">
+            <!-- LinkedIn Option -->
+            <a href="https://www.linkedin.com/in/apsara-raj-k-312545304?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white border border-brand-ice hover:border-brand-blue hover:bg-brand-ice/20 p-3 rounded-xl shadow-premium transition duration-200">
+                <span class="w-8 h-8 rounded-lg bg-[#0077B5]/10 text-[#0077B5] flex items-center justify-center text-sm"><i class="fa-brands fa-linkedin-in"></i></span>
+                <div class="flex flex-col text-left">
+                    <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#0077B5]">LinkedIn Profile</span>
+                    <span class="text-[9px] text-brand-textMuted font-medium">Connect Professionally</span>
+                </div>
+            </a>
+            <!-- Email Option -->
+            <a href="mailto:apsarakshyp999@gmail.com" class="flex items-center gap-3 bg-white border border-brand-ice hover:border-brand-blue hover:bg-brand-ice/20 p-3 rounded-xl shadow-premium transition duration-200">
+                <span class="w-8 h-8 rounded-lg bg-[#EA4335]/10 text-[#EA4335] flex items-center justify-center text-sm"><i class="fa-solid fa-envelope"></i></span>
+                <div class="flex flex-col text-left">
+                    <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#EA4335]">Send Email</span>
+                    <span class="text-[9px] text-brand-textMuted font-medium">apsarakshyp999@gmail.com</span>
+                </div>
+            </a>
+            <!-- WhatsApp Option -->
+            <a href="https://api.whatsapp.com/send?phone=917859088330" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white border border-brand-ice hover:border-brand-blue hover:bg-brand-ice/20 p-3 rounded-xl shadow-premium transition duration-200">
+                <span class="w-8 h-8 rounded-lg bg-[#25D366]/10 text-[#25D366] flex items-center justify-center text-sm"><i class="fa-brands fa-whatsapp text-base"></i></span>
+                <div class="flex flex-col text-left">
+                    <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#25D366]">WhatsApp Chat</span>
+                    <span class="text-[9px] text-brand-textMuted font-medium">Direct Messenger Line</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Editorial Navigation -->
+    <nav class="sticky top-0 z-40 bg-brand-bgCanvas/95 backdrop-blur-md border-b border-brand-ice py-4 px-6 md:px-12">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="flex flex-col">
+                <span id="nav-name" class="font-serif text-xl font-bold tracking-tight text-brand-dark">APSARA RAJ</span>
+            </div>
+            
+            <div class="flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-brand-dark">
+                <a href="#about-section" class="hover:text-brand-blue transition duration-200">About</a>
+                <a href="#academic-section" class="hover:text-brand-blue transition duration-200">Education</a>
+                <a href="#essays-section" class="hover:text-brand-blue transition duration-200">Selected Essays</a>
+                <a href="#experience-section" class="hover:text-brand-blue transition duration-200">Milestones</a>
+                <a href="mailto:apsarakshyp999@gmail.com" class="border-2 border-brand-dark px-4 py-2 rounded-lg bg-brand-dark text-white hover:bg-brand-blue hover:border-brand-blue transition duration-300 shadow-sm">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Advanced Moving Typography: Continuous Editorial Ticker Banner -->
+    <div class="bg-brand-dark border-b border-brand-blue/30 py-3 overflow-hidden select-none">
+        <div class="animate-marquee-container">
+            <div class="animate-marquee-content text-[9px] tracking-[0.25em] font-extrabold uppercase text-brand-ice/90 space-x-12">
+                <span>National Security Commentary</span><span class="text-brand-blue font-serif">•</span>
+                <span>Media Literacy Frameworks</span><span class="text-brand-blue font-serif">•</span>
+                <span>Socio-Political Critiques</span><span class="text-brand-blue font-serif">•</span>
+                <span>Asymmetric Information Warfare Analysis</span><span class="text-brand-blue font-serif">•</span>
+                <span>Digital Narratives & Strategy</span><span class="text-brand-blue font-serif">•</span>
+                <span>Investigative Editorial Pipelines</span><span class="text-brand-blue font-serif">•</span>
+            </div>
+            <!-- Duplicated ticker segment for a seamless loop transition -->
+            <div class="animate-marquee-content text-[9px] tracking-[0.25em] font-extrabold uppercase text-brand-ice/90 space-x-12 ml-12">
+                <span>National Security Commentary</span><span class="text-brand-blue font-serif">•</span>
+                <span>Media Literacy Frameworks</span><span class="text-brand-blue font-serif">•</span>
+                <span>Socio-Political Critiques</span><span class="text-brand-blue font-serif">•</span>
+                <span>Asymmetric Information Warfare Analysis</span><span class="text-brand-blue font-serif">•</span>
+                <span>Digital Narratives & Strategy</span><span class="text-brand-blue font-serif">•</span>
+                <span>Investigative Editorial Pipelines</span><span class="text-brand-blue font-serif">•</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Editorial Header Section -->
+    <header class="bg-gradient-to-b from-brand-dark to-[#3A312B] text-white py-16 px-6 md:px-12 relative overflow-hidden">
+        <!-- Accent dynamic backdrop stripes -->
+        <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#79A3C3_1.5px,transparent_1.5px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-5xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-8 space-y-4">
+                <div class="inline-flex items-center gap-2 bg-brand-blue text-brand-dark text-[10px] uppercase font-bold tracking-[0.2em] px-3 py-1.5 rounded-full border border-brand-blue/50">
+                    <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span> Investigative Columnist
+                </div>
+                <h1 id="hero-title" class="font-serif text-4xl md:text-5xl font-bold leading-tight tracking-tight text-brand-ice">
+                    Analyzing Security Dynamics, Media Systems & Global Affairs
+                </h1>
+                <p id="hero-desc" class="text-stone-200 text-sm md:text-base leading-relaxed max-w-2xl font-light">
+                    Translating critical socio-political developments, media literacy vulnerabilities, and complex international relations into high-impact digital intelligence.
+                </p>
+            </div>
+            <div class="md:col-span-4 bg-[#4D4038]/80 backdrop-blur-md border border-brand-blue/30 p-6 rounded-2xl shadow-2xl">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-brand-blue mb-3">Briefing Areas</h3>
+                <ul class="space-y-2 text-xs text-stone-200">
+                    <li><i class="fa-solid fa-caret-right text-brand-blue mr-2"></i> National Security Commentary</li>
+                    <li><i class="fa-solid fa-caret-right text-brand-blue mr-2"></i> Media Literacy Frameworks</li>
+                    <li><i class="fa-solid fa-caret-right text-brand-blue mr-2"></i> Socio-Political Critiques</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-6 md:px-12 py-12 md:py-20 space-y-24">
+
+        <!-- SECTION 1: ELEGANT PORTRAIT & NARRATIVE BIO -->
+        <section id="about-section" class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start border-b border-brand-ice pb-16">
+            
+            <!-- Left Column: Portrait & Quick Metas (5 Columns) -->
+            <div class="md:col-span-5 flex flex-col gap-6">
+                <!-- Classy Frame for Profile Image with error handler for hosting resiliency -->
+                <div id="portrait-frame" class="relative group w-full aspect-[4/5] bg-brand-ice rounded-2xl border-4 border-white shadow-premium overflow-hidden flex items-center justify-center">
+                    <img id="profile-img" src="WhatsApp Image 2026-06-17 at 21.12.12.jpeg" onerror="handleImageError(this)" alt="Apsara Raj" class="w-full h-full object-cover transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/20 via-transparent to-transparent opacity-60"></div>
+                </div>
+
+                <!-- Contact details under photo -->
+                <div class="bg-white border border-brand-ice p-5 rounded-2xl space-y-3 shadow-sm text-xs">
+                    <div class="flex items-center gap-2.5 text-brand-textMuted">
+                        <i class="fa-solid fa-location-dot text-brand-blue w-4"></i>
+                        <span id="meta-location">New Delhi, India</span>
+                    </div>
+                    <div class="flex items-center gap-2.5 text-brand-textMuted">
+                        <i class="fa-solid fa-envelope text-brand-blue w-4"></i>
+                        <span id="meta-email">apsarakshyp999@gmail.com</span>
+                    </div>
+                    <div class="flex items-center gap-2.5 text-brand-textMuted">
+                        <i class="fa-solid fa-phone text-brand-blue w-4"></i>
+                        <span id="meta-phone">+91 78590 88330</span>
+                    </div>
+                    <div class="flex items-center gap-2.5 text-brand-textMuted">
+                        <i class="fa-brands fa-linkedin text-brand-blue w-4"></i>
+                        <span id="meta-linkedin">linkedin.com/in/apsara-raj-k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Narrative Editorial Statement (7 Columns) -->
+            <div class="md:col-span-7 space-y-6">
+                <div class="space-y-2">
+                    <span id="about-role-tag" class="text-[10px] tracking-[0.25em] uppercase font-bold text-brand-taupe block">About the Author</span>
+                    <h2 id="about-headline" class="font-serif text-3xl md:text-4xl font-semibold tracking-tight text-brand-dark leading-tight">
+                        Translating complex national security dynamics and digital narratives into clear, analytical reporting.
+                    </h2>
+                </div>
+                
+                <p id="about-paragraph-1" class="text-brand-textMuted text-sm md:text-base leading-relaxed font-light">
+                    I am a B.A. (Hons) Journalism graduate from Maharaja Agrasen College, University of Delhi, specializing in political science, international relations, and digital media ecosystems. My editorial background merges rigorous academic inquiry with high-impact writing.
+                </p>
+
+                <p id="about-paragraph-2" class="text-brand-textMuted text-sm leading-relaxed font-light">
+                    My core expertise centers around analyzing asymmetric national security vulnerabilities, misinformation delivery structures, and content consumption vectors. By combining strategic editorial structures with strict narrative accuracy, I construct narratives designed to clarify complicated international developments.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ACADEMIC FOUNDATION (SHIFTED INTO ITS OWN SECTION) -->
+        <section id="academic-section" class="bg-white border border-brand-ice p-8 rounded-3xl shadow-premium relative overflow-hidden">
+            <div class="absolute right-[-40px] bottom-[-40px] opacity-[0.03] text-9xl font-serif text-brand-dark"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="max-w-3xl space-y-4">
+                <span class="text-[10px] tracking-[0.25em] uppercase font-bold text-brand-taupe block">Academic Foundation</span>
+                <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-dark">Higher Education & Specialization</h3>
+                
+                <div class="p-6 rounded-2xl bg-brand-bgCanvas/40 border border-brand-ice space-y-2 mt-4">
+                    <p id="about-academic-degree" class="text-base font-bold text-brand-dark">B.A. (Hons) Journalism & Mass Communication</p>
+                    <p id="about-academic-institution" class="text-sm text-brand-textMuted">Maharaja Agrasen College, University of Delhi (2022 – 2025)</p>
+                    <p id="about-academic-focus" class="text-xs italic text-brand-dark mt-2 font-medium">Focus Area: Political Science, International Relations & Digital Media Ecosystems</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: EDITORIAL PHILOSOPHY & PILLARS -->
+        <section id="philosophy-section" class="bg-white border border-brand-ice p-8 rounded-3xl shadow-premium relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-blue/5 rounded-full blur-2xl"></div>
+            <div class="relative z-10 space-y-6">
+                <div class="space-y-1">
+                    <span class="text-[10px] tracking-[0.25em] uppercase font-bold text-brand-taupe">Research Philosophy</span>
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-dark">Core Analytical Pillars</h3>
+                    <p class="text-xs text-brand-textMuted max-w-xl font-light">
+                        Guiding principles underpinning every publication, editorial layout, and public brief.
+                    </p>
+                </div>
+
+                <!-- Editorial Pillars Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+                    <div class="border border-brand-ice p-5 rounded-xl bg-brand-bgCanvas/40 space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-brand-blue/10 text-brand-dark flex items-center justify-center text-sm font-bold">I</div>
+                        <h4 class="font-bold text-sm text-brand-dark">Rigorous Fact-Checking</h4>
+                        <p class="text-xs text-brand-textMuted font-light leading-relaxed">
+                            Treating information as a crucial component of national stability. Verifying and validating primary sources before drafting.
+                        </p>
+                    </div>
+
+                    <div class="border border-brand-ice p-5 rounded-xl bg-brand-bgCanvas/40 space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-brand-blue/10 text-brand-dark flex items-center justify-center text-sm font-bold">II</div>
+                        <h4 class="font-bold text-sm text-brand-dark">Asymmetric Threat Analysis</h4>
+                        <p class="text-xs text-brand-textMuted font-light leading-relaxed">
+                            Evaluating how modern digital warfare, online algorithms, and social communities impact public faith in national structures.
+                        </p>
+                    </div>
+
+                    <div class="border border-brand-ice p-5 rounded-xl bg-brand-bgCanvas/40 space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-brand-blue/10 text-brand-dark flex items-center justify-center text-sm font-bold">III</div>
+                        <h4 class="font-bold text-sm text-brand-dark">Structural Integrity</h4>
+                        <p class="text-xs text-brand-textMuted font-light leading-relaxed">
+                            Structuring articles to ensure high readability and organic indexing, avoiding clickbait in favor of high-quality, deep writing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: SELECTED ESSAYS -->
+        <section id="essays-section" class="space-y-8 border-t border-brand-ice pt-16">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-end border-b border-brand-ice pb-4">
+                <div class="space-y-1">
+                    <span class="text-[10px] tracking-[0.25em] uppercase font-bold text-brand-taupe">Geopolitical Commentary & Public Policy Analysis</span>
+                    <h2 class="font-serif text-2xl md:text-3xl font-bold text-brand-dark">Selected Medium Publications</h2>
+                </div>
+                <div class="text-xs text-brand-textMuted tracking-wider font-semibold mt-2 md:mt-0 bg-brand-blue/5 px-3 py-1.5 rounded-full border border-brand-blue/10">
+                    <i class="fa-brands fa-medium mr-1 text-brand-dark"></i> Medium Columns: <span id="medium-profile" class="font-bold hover:underline">@apsara-raj-k</span>
+                </div>
+            </div>
+
+            <!-- Two-Column Refined Card Grid for Blog Highlights -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Blog Entry 1 -->
+                <article class="bg-white border border-brand-ice p-6 rounded-2xl flex flex-col justify-between hover:border-brand-blue hover:shadow-premium transition-all duration-300 relative group">
+                    <div class="absolute right-4 top-4 opacity-0 group-hover:opacity-100 transition-all text-brand-blue">
+                        <i class="fa-solid fa-square-arrow-up-right text-lg"></i>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-[10px] text-brand-textMuted uppercase font-extrabold tracking-wider">
+                            <span id="essay-tag-1" class="text-brand-taupe">National Security & Policy</span>
+                            <span id="essay-time-1" class="bg-brand-ice px-2 py-1 rounded text-brand-dark">8 Min Read</span>
+                        </div>
+                        <h3 id="essay-title-1" class="font-serif text-xl font-bold leading-snug text-brand-dark group-hover:text-brand-blue transition duration-200">
+                            Stolen Futures: How A Nation’s Corrupt Conscience Is Failing Its Students
+                        </h3>
+                        <p id="essay-desc-1" class="text-xs text-brand-textMuted leading-relaxed font-light">
+                            An investigative and structural critique examining systematic vulnerabilities in centralized examination frameworks, exploring the sociopolitical ramifications of compromised national trust.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-brand-ice/60 mt-6 flex justify-between items-center text-xs">
+                        <span id="essay-hash-1" class="text-[10px] tracking-wider text-brand-textMuted uppercase font-semibold bg-brand-ice px-2 py-1 rounded">#SocioPoliticalCrisis</span>
+                        <a id="essay-link-1" href="https://medium.com" target="_blank" class="font-bold text-brand-dark hover:text-white inline-flex items-center gap-1.5 bg-brand-blue/10 hover:bg-brand-blue px-3 py-1.5 rounded-lg transition">
+                            Read Essay <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Entry 2 -->
+                <article class="bg-white border border-brand-ice p-6 rounded-2xl flex flex-col justify-between hover:border-brand-blue hover:shadow-premium transition-all duration-300 relative group">
+                    <div class="absolute right-4 top-4 opacity-0 group-hover:opacity-100 transition-all text-brand-blue">
+                        <i class="fa-solid fa-square-arrow-up-right text-lg"></i>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-[10px] text-brand-textMuted uppercase font-extrabold tracking-wider">
+                            <span id="essay-tag-2" class="text-brand-taupe">Digital Narratives & Warfare</span>
+                            <span id="essay-time-2" class="bg-brand-ice px-2 py-1 rounded text-brand-dark">6 Min Read</span>
+                        </div>
+                        <h3 id="essay-title-2" class="font-serif text-xl font-bold leading-snug text-brand-dark group-hover:text-brand-blue transition duration-200">
+                            A Viral Rebellion: The Rise, Risks and Reality of the Cockroach Janta Party
+                        </h3>
+                        <p id="essay-desc-2" class="text-xs text-brand-textMuted leading-relaxed font-light">
+                            Deconstructing digital counter-cultures and political satire, detailing how decentralized internet communities weaponize narrative structures to organize instant political movements.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-brand-ice/60 mt-6 flex justify-between items-center text-xs">
+                        <span id="essay-hash-2" class="text-[10px] tracking-wider text-brand-textMuted uppercase font-semibold bg-brand-ice px-2 py-1 rounded">#InformationWarfare</span>
+                        <a id="essay-link-2" href="https://medium.com" target="_blank" class="font-bold text-brand-dark hover:text-white inline-flex items-center gap-1.5 bg-brand-blue/10 hover:bg-brand-blue px-3 py-1.5 rounded-lg transition">
+                            Read Essay <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 5: MILESTONES / TIMELINE -->
+        <section id="experience-section" class="grid grid-cols-1 md:grid-cols-12 gap-10 border-t border-brand-ice pt-16">
+            <div class="md:col-span-4 space-y-3">
+                <span class="text-[10px] tracking-[0.25em] uppercase font-bold text-brand-taupe">Professional Timeline</span>
+                <h2 class="font-serif text-3xl font-bold text-brand-dark">Milestones</h2>
+                <p class="text-xs text-brand-textMuted leading-relaxed pr-4 font-light">
+                    Practical, corporate-level writing, digital keyword layouts, and academic anchoring schedules.
+                </p>
+            </div>
+            
+            <div class="md:col-span-8 space-y-8 relative before:absolute before:inset-y-0 before:left-2 before:w-[2px] before:bg-brand-ice pl-6">
+                <!-- Milestone 1 -->
+                <div class="space-y-2 relative">
+                    <!-- Custom timeline point -->
+                    <span class="absolute left-[-29px] top-[4px] w-4 h-4 rounded-full bg-brand-blue border-4 border-brand-bgCanvas ring-2 ring-brand-blue/50"></span>
+                    
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+                        <h3 id="exp-job-1" class="font-serif text-lg font-bold text-brand-dark">Content Strategist Intern</h3>
+                        <span id="exp-meta-1" class="text-[10px] uppercase font-bold text-brand-taupe bg-brand-ice/30 px-2.5 py-1 rounded font-sans">Vedantu Innovations  |  Dec 2024 – Jun 2025</span>
+                    </div>
+                    <ul class="text-xs text-brand-textMuted space-y-2 list-disc pl-4 font-light leading-relaxed">
+                        <li id="exp-bullet-11">Spearheaded targeted SEO content development, running targeted keyword operations and competitor benchmarking to optimize educational reserves, increasing organic search discoverability.</li>
+                        <li id="exp-bullet-12">Collaborated with cross-functional growth leads to edit, proofread, and scale student-facing blog resources, strengthening organic page domain authority.</li>
+                    </ul>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="space-y-2 relative">
+                    <!-- Custom timeline point -->
+                    <span class="absolute left-[-29px] top-[4px] w-4 h-4 rounded-full bg-brand-dark border-4 border-brand-bgCanvas ring-2 ring-brand-dark/50"></span>
+                    
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+                        <h3 id="exp-job-2" class="font-serif text-lg font-bold text-brand-dark">Coordinator, Anchoring Pool</h3>
+                        <span id="exp-meta-2" class="text-[10px] uppercase font-bold text-brand-dark bg-brand-ice/30 px-2.5 py-1 rounded font-sans">Maharaja Agrasen College, DU  |  2022 – 2025</span>
+                    </div>
+                    <ul class="text-xs text-brand-textMuted space-y-2 list-disc pl-4 font-light leading-relaxed">
+                        <li id="exp-bullet-21">Directed anchoring workflows, script layout development, and talent schedules for key live academic events focusing on international affairs.</li>
+                        <li id="exp-bullet-22">Drafted and copyedited strategic articles for Yugantar annual magazine, managing strict content selection and narrative consistency.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: SELECTED ACADEMIC PROJECT & DISSERTATION -->
+        <section id="dissertation-section" class="grid grid-cols-1 md:grid-cols-12 gap-10 border-t border-brand-ice pt-16">
+            <div class="md:col-span-4 space-y-3">
+                <span class="text-[10px] tracking-[0.25em] uppercase font-bold text-brand-taupe">Analytical Frameworks</span>
+                <h2 class="font-serif text-3xl font-bold text-brand-dark">Selected Project</h2>
+                <p class="text-xs text-brand-textMuted leading-relaxed pr-4 font-light">
+                    Highlighting civilian defense models, cognitive security, and digital misinformation shields.
+                </p>
+            </div>
+            
+            <div class="md:col-span-8">
+                <!-- Hover active interactive card linking directly to Google Drive dissertation resource -->
+                <div class="bg-white border border-brand-ice p-8 rounded-2xl space-y-5 shadow-premium hover:border-brand-blue/80 hover:shadow-vibrant transition-all duration-300 relative group/card">
+                    <div class="absolute top-4 right-4 text-brand-blue text-2xl transition-transform duration-300 group-hover/card:scale-110"><i class="fa-solid fa-award"></i></div>
+                    
+                    <div class="inline-flex items-center gap-2 bg-brand-dark text-white text-[9px] uppercase tracking-widest font-extrabold px-3 py-1.5 rounded-lg">
+                        <i class="fa-solid fa-bookmark text-brand-blue"></i> Academic Dissertation
+                    </div>
+                    
+                    <!-- Clickable Dissertation Title Link Integration -->
+                    <div class="block">
+                        <a href="https://drive.google.com/file/d/1_hJZwwc19nlX_c3FE6J4UgB4HLsFeL_h/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 group/link">
+                            <h3 id="research-title" class="font-serif text-xl font-bold text-brand-dark leading-snug group-hover/link:text-brand-blue group-hover/link:underline decoration-brand-blue decoration-2 transition duration-200">
+                                Role of Media Literacy in Safeguarding National Security
+                            </h3>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-sm text-brand-blue opacity-80 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="space-y-4 text-xs text-brand-textMuted leading-relaxed font-light">
+                        <!-- Precise Two-Line Elaboration -->
+                        <p id="research-body-1" class="border-l-2 border-brand-blue pl-3 italic text-brand-textMuted">
+                            Investigated modern digital misinformation structures and asymmetric security hazards, analyzing content consumption behaviors across core demographics.
+                        </p>
+                        <p id="research-body-2" class="font-semibold text-brand-textDark">
+                            Project Outcome: Formulated a complete modular curriculum on Media Literacy to serve as a civilian defensive shield against hostile narrative campaigns.
+                        </p>
+                        
+                        <!-- Premium Action Button & Pulse Indicator for Instant Accessibility -->
+                        <div class="pt-2">
+                            <a href="https://drive.google.com/file/d/1_hJZwwc19nlX_c3FE6J4UgB4HLsFeL_h/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-brand-dark hover:bg-brand-blue text-white hover:text-brand-dark font-extrabold uppercase tracking-wider text-[10px] px-5 py-3 rounded-xl shadow-premium transition duration-300">
+                                <span class="relative flex h-2 w-2">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-blue opacity-70"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-blue"></span>
+                                </span>
+                                <span>Read Full Dissertation Paper</span>
+                                <i class="fa-solid fa-file-pdf"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: CORE COMPETENCIES MATRIX -->
+        <section id="competencies-section" class="grid grid-cols-1 md:grid-cols-12 gap-10 border-t border-brand-ice pt-16">
+            <div class="md:col-span-4 space-y-3">
+                <span class="text-[10px] tracking-[0.25em] uppercase font-bold text-brand-taupe">Functional Skills</span>
+                <h2 class="font-serif text-3xl font-bold text-brand-dark">Domain Competencies</h2>
+            </div>
+            
+            <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs leading-relaxed">
+                <!-- Competency Group 1 -->
+                <div class="bg-white border border-brand-ice p-5 rounded-xl space-y-2.5 shadow-premium">
+                    <h4 class="font-extrabold uppercase tracking-wider text-brand-blue text-[10px] flex items-center gap-1.5">
+                        <i class="fa-solid fa-feather-pointed"></i> Content & Journalism
+                    </h4>
+                    <p id="skills-editorial" class="text-brand-textMuted font-light">
+                        SEO Search Analytics, Geopolitical Commentary, News Feature Strategy, Investigative Pipelines, Copyediting Frameworks
+                    </p>
+                </div>
+
+                <!-- Competency Group 2 -->
+                <div class="bg-white border border-brand-ice p-5 rounded-xl space-y-2.5 shadow-premium">
+                    <h4 class="font-extrabold uppercase tracking-wider text-brand-dark text-[10px] flex items-center gap-1.5">
+                        <i class="fa-solid fa-server"></i> Technical Systems
+                    </h4>
+                    <p id="skills-platforms" class="text-brand-textMuted font-light">
+                        WordPress, MS Office Ecosystem, GPT Prompt Engineering, Claude Workspace, Vita Editing Suite, Canva Pro
+                    </p>
+                </div>
+
+                <!-- Competency Group 3 -->
+                <div class="bg-white border border-brand-ice p-5 rounded-xl space-y-2.5 shadow-premium">
+                    <h4 class="font-extrabold uppercase tracking-wider text-brand-dark text-[10px] flex items-center gap-1.5">
+                        <i class="fa-solid fa-network-wired"></i> Delivery & Soft Skills
+                    </h4>
+                    <p id="skills-soft" class="text-brand-textMuted font-light">
+                        Cross-functional Collaboration, Public Speaking, Stakeholder Communication, Critical Problem-solving, Narrative Adaptability
+                    </p>
+                </div>
+
+                <!-- Competency Group 4 -->
+                <div class="bg-white border border-brand-ice p-5 rounded-xl space-y-2.5 shadow-premium">
+                    <h4 class="font-extrabold uppercase tracking-wider text-brand-blue text-[10px] flex items-center gap-1.5">
+                        <i class="fa-solid fa-language"></i> Language Frameworks
+                    </h4>
+                    <p id="skills-languages" class="text-brand-textMuted font-light">
+                        Hindi (Native Fluency) &middot; English (Professional Fluency)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Block -->
+    <footer class="bg-brand-dark text-white border-t-4 border-brand-blue py-16 px-6 md:px-12 text-xs">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col gap-1 items-center md:items-start text-center md:text-left">
+                <span id="footer-logo" class="font-serif font-extrabold text-xl text-brand-ice tracking-wider">APSARA RAJ</span>
+                <span id="footer-tag" class="text-stone-300 font-light text-[11px]">Journalism, National Security & Narrative Strategy</span>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6 text-[11px] font-bold uppercase tracking-wider text-brand-ice">
+                <a href="#about-section" class="hover:text-brand-blue transition">About</a>
+                <a href="#essays-section" class="hover:text-brand-blue transition">Selected Essays</a>
+                <a href="#experience-section" class="hover:text-brand-blue transition">Experience</a>
+            </div>
+
+            <div class="text-center md:text-right space-y-1 text-[11px]">
+                <p>&copy; 2026 Apsara Raj. All rights reserved.</p>
+                <p class="text-[9px] text-stone-400">Classy, high-impact & intellectually focused design layout.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let isSocialHubOpen = false;
+
+        // Graceful error handler to guarantee photo element displays in any hosted environment
+        function handleImageError(img) {
+            // Replaces the source with a beautifully styled vector illustration matching your design parameters
+            const parent = img.parentElement;
+            if (parent) {
+                parent.innerHTML = `
+                    <div class="w-full h-full bg-gradient-to-br from-brand-dark to-[#4D4038] flex flex-col items-center justify-center p-6 text-center select-none relative">
+                        <!-- Geometric design grids -->
+                        <div class="absolute inset-0 opacity-[0.07] bg-[radial-gradient(#FFF_1px,transparent_1px)] [background-size:12px_12px]"></div>
+                        <!-- Modern elegant vector avatar placeholder -->
+                        <div class="w-24 h-24 rounded-full bg-white/10 border border-brand-blue/30 flex items-center justify-center mb-4 relative z-10 shadow-lg">
+                            <svg class="w-12 h-12 text-brand-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-serif text-lg font-bold text-brand-ice relative z-10">Apsara Raj</h4>
+                        <p class="text-[10px] tracking-[0.2em] text-brand-blue uppercase font-bold mt-1.5 relative z-10">Editorial Portfolio</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Toggle Social Hub Dial/Popup visibility states
+        function toggleSocialHub() {
+            isSocialHubOpen = !isSocialHubOpen;
+            const menu = document.getElementById('socialHubMenu');
+            const icon = document.getElementById('socialHubIcon');
+
+            if (isSocialHubOpen) {
+                menu.classList.remove('hidden');
+                setTimeout(() => {
+                    menu.classList.remove('opacity-0', 'translate-y-4', 'scale-95');
+                    menu.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+                }, 10);
+                icon.className = 'fa-solid fa-xmark transition-transform duration-300';
+            } else {
+                menu.classList.remove('opacity-100', 'translate-y-0', 'scale-100');
+                menu.classList.add('opacity-0', 'translate-y-4', 'scale-95');
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                }, 300);
+                icon.className = 'fa-solid fa-paper-plane transition-transform duration-300';
+            }
+        }
+    </script>
+</body>
+</html>
